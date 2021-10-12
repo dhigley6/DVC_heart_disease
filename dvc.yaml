@@ -1,0 +1,9 @@
+stages:
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+    - data/raw/heart_cleveland_upload.csv
+    - src/preprocess.py
+    outs:
+    - data/processed/test.csv
+    - data/processed/training.csv

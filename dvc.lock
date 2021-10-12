@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+    - path: data/raw/heart_cleveland_upload.csv
+      md5: 9f536dad38229ca519687b116f1d632a
+      size: 11106
+    - path: src/preprocess.py
+      md5: c294a5db1e73a2e504a68769dba9a27b
+      size: 350
+    outs:
+    - path: data/processed/test.csv
+      md5: 99933c299caf5c99bb8d2718a4628fa0
+      size: 3732
+    - path: data/processed/training.csv
+      md5: 4e90a08112e30ad76df0ecfc683b8196
+      size: 8493
