@@ -9,3 +9,4 @@ if __name__ == '__main__':
     train, test = train_test_split(data, test_size=0.3)
     train.to_csv('data/processed/training.csv')
     test.to_csv('data/processed/test.csv')
+    
