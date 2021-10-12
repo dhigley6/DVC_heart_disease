@@ -7,3 +7,11 @@ stages:
     outs:
     - data/processed/test.csv
     - data/processed/training.csv
+  tune_hyperparameters:
+    cmd: python src/tune.py
+    deps:
+    - data/processed/test.csv
+    - data/processed/training.csv
+    - src/tune.py
+    outs:
+    - results/tuned_hyperparameters.json

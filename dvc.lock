@@ -16,3 +16,19 @@ stages:
     - path: data/processed/training.csv
       md5: 69de03c01a7077734ba59a062845a527
       size: 8493
+  tune_hyperparameters:
+    cmd: python src/tune.py
+    deps:
+    - path: data/processed/test.csv
+      md5: ef20f962c2ca840be53bb4125c1591b1
+      size: 3732
+    - path: data/processed/training.csv
+      md5: 69de03c01a7077734ba59a062845a527
+      size: 8493
+    - path: src/tune.py
+      md5: f4a05c329bc290f9d0cc5ec78149bb1c
+      size: 1005
+    outs:
+    - path: results/tuned_hyperparameters.json
+      md5: 0317b346f87ffe5dd9beab1e897b0b73
+      size: 31

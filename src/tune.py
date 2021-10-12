@@ -2,6 +2,8 @@
 """
 
 import pandas as pd
+import numpy as np
+import json
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
@@ -20,3 +22,5 @@ if __name__ == "__main__":
     param_grid = {'lr__C': np.logspace(-3, 3, 20)}
     tuned_lr = GridSearchCV(lr, return_train_score=True, param_grid=param_grid, scoring='accuracy', cv=10)
     tuned_lr.fit(X_train, y_train)
+    with open('results/tuned_hyperparameters.json', 'w') as outfile:
+        json.dump(tuned_lr.best_params_, outfile)
