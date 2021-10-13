@@ -15,3 +15,11 @@ stages:
     - src/tune.py
     outs:
     - results/tuned_hyperparameters.json
+  train:
+    cmd: python src/train.py
+    deps:
+    - data/processed/training.csv
+    - results/tuned_hyperparameters.json
+    - src/train.py
+    outs:
+    - models/logistic_regression.pickle

@@ -3,6 +3,7 @@
 
 import json
 import pickle
+import pandas as pd
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
@@ -15,5 +16,8 @@ if __name__ == "__main__":
     X_train, y_train = train.drop(['condition'], axis=1), train['condition']
     lr = Pipeline([
         ('scale', StandardScaler()),
-        ('lr', LogisticRegression(**hyperparams))
+        ('lr', LogisticRegression())
     ])
+    lr.set_params(**hyperparams)
+    with open('models/logistic_regression.pickle', 'wb') as f:
+        pickle.dump(lr, f)

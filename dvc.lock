@@ -32,3 +32,19 @@ stages:
     - path: results/tuned_hyperparameters.json
       md5: 0317b346f87ffe5dd9beab1e897b0b73
       size: 31
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/processed/training.csv
+      md5: 69de03c01a7077734ba59a062845a527
+      size: 8493
+    - path: results/tuned_hyperparameters.json
+      md5: 0317b346f87ffe5dd9beab1e897b0b73
+      size: 31
+    - path: src/train.py
+      md5: f04a518abd7d8707381d0c5cfac923e3
+      size: 746
+    outs:
+    - path: models/logistic_regression.pickle
+      md5: 92c53f84edcbdf2ea599386d7ca80eed
+      size: 604
