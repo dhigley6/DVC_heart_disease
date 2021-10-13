@@ -23,3 +23,18 @@ stages:
     - src/train.py
     outs:
     - models/logistic_regression.pickle
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - data/processed/test.csv
+    - models/logistic_regression.pickle
+    - src/evaluate.py
+    plots:
+    - results/pr_curve.json:
+        cache: false
+        x: recall
+        y: precision
+    - results/roc_curve.json:
+        cache: false
+        x: fpr
+        y: tpr

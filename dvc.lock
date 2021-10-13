@@ -48,3 +48,22 @@ stages:
     - path: models/logistic_regression.pickle
       md5: d38c6f76bf8f53151a62e6aec05dd1a4
       size: 1725
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: data/processed/test.csv
+      md5: ef20f962c2ca840be53bb4125c1591b1
+      size: 3732
+    - path: models/logistic_regression.pickle
+      md5: d38c6f76bf8f53151a62e6aec05dd1a4
+      size: 1725
+    - path: src/evaluate.py
+      md5: 112d674fe79d62b9b5b27c5031b17e4c
+      size: 1331
+    outs:
+    - path: results/pr_curve.json
+      md5: 12934d5010ceda8a6fd843cb9c7bcced
+      size: 11235
+    - path: results/roc_curve.json
+      md5: bd4748c8c71a9c08b6a481839b492d8b
+      size: 3318
