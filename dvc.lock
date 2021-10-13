@@ -42,9 +42,9 @@ stages:
       md5: 0317b346f87ffe5dd9beab1e897b0b73
       size: 31
     - path: src/train.py
-      md5: f04a518abd7d8707381d0c5cfac923e3
-      size: 746
+      md5: 1a07dc4062537dfe57df8ecb487222e7
+      size: 775
     outs:
     - path: models/logistic_regression.pickle
-      md5: 92c53f84edcbdf2ea599386d7ca80eed
-      size: 604
+      md5: d38c6f76bf8f53151a62e6aec05dd1a4
+      size: 1725

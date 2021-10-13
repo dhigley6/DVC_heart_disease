@@ -19,5 +19,6 @@ if __name__ == "__main__":
         ('lr', LogisticRegression())
     ])
     lr.set_params(**hyperparams)
+    lr.fit(X_train, y_train)
     with open('models/logistic_regression.pickle', 'wb') as f:
         pickle.dump(lr, f)
