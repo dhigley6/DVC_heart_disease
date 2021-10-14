@@ -25,7 +25,7 @@ if __name__ == "__main__":
         json.dump(results_scores, f, indent=4)
     precision, recall, prc_thresholds = metrics.precision_recall_curve(y_test, prediction_probs)
     fpr, tpr, roc_thresholds = metrics.roc_curve(y_test, prediction_probs)
-    prob_true, prob_pred = calibration_curve(y_test, prediction_probs)
+    prob_true, prob_pred = calibration_curve(y_test, prediction_probs, n_bins=10)
     with open('results/pr_curve.json', 'w') as f:
         json.dump(
             {

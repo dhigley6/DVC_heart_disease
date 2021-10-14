@@ -9,6 +9,76 @@
 </head>
 <body>
     
+    <div id = "plot_results_calibration_curve_json">
+        <script type = "text/javascript">
+            var spec = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "data": {
+        "values": [
+    {
+        "prob_predicted": 0.26209343133331015,
+        "prob_true": 0.0,
+        "rev": "workspace"
+    },
+    {
+        "prob_predicted": 0.3398924724515266,
+        "prob_true": 0.21739130434782608,
+        "rev": "workspace"
+    },
+    {
+        "prob_predicted": 0.43714726931811004,
+        "prob_true": 0.21052631578947367,
+        "rev": "workspace"
+    },
+    {
+        "prob_predicted": 0.5553636201920735,
+        "prob_true": 0.875,
+        "rev": "workspace"
+    },
+    {
+        "prob_predicted": 0.6469952195445462,
+        "prob_true": 0.9090909090909091,
+        "rev": "workspace"
+    },
+    {
+        "prob_predicted": 0.7148551727457348,
+        "prob_true": 1.0,
+        "rev": "workspace"
+    }
+]
+    },
+    "title": "",
+    "width": 300,
+    "height": 300,
+    "mark": {
+        "type": "line"
+    },
+    "encoding": {
+        "x": {
+            "field": "prob_true",
+            "type": "quantitative",
+            "title": "prob_true"
+        },
+        "y": {
+            "field": "prob_predicted",
+            "type": "quantitative",
+            "title": "prob_predicted",
+            "scale": {
+                "zero": false
+            }
+        },
+        "color": {
+            "field": "rev",
+            "type": "nominal"
+        }
+    }
+}
+;
+            vegaEmbed('#plot_results_calibration_curve_json', spec);
+        </script>
+    </div>
+    
+
     <div id = "plot_results_pr_curve_json">
         <script type = "text/javascript">
             var spec = {

@@ -32,10 +32,16 @@ stages:
     plots:
     - results/calibration_curve.json:
         cache: false
+        x: prob_true
+        y: prob_predicted
     - results/pr_curve.json:
         cache: false
+        x: recall
+        y: precision
     - results/roc_curve.json:
         cache: false
+        x: fpr
+        y: tpr
     metrics:
     - results/scores.json:
         cache: false

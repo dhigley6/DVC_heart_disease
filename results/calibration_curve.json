@@ -1,16 +1,28 @@
 {
     "calibration": [
         {
-            "prob_true": 0.14285714285714285,
-            "prob_predicted": 0.3132185154967094
+            "prob_true": 0.0,
+            "prob_predicted": 0.26209343133331015
         },
         {
-            "prob_true": 0.5142857142857142,
-            "prob_predicted": 0.49118902971763634
+            "prob_true": 0.21739130434782608,
+            "prob_predicted": 0.3398924724515266
         },
         {
-            "prob_true": 0.95,
-            "prob_predicted": 0.677532198485081
+            "prob_true": 0.21052631578947367,
+            "prob_predicted": 0.43714726931811004
+        },
+        {
+            "prob_true": 0.875,
+            "prob_predicted": 0.5553636201920735
+        },
+        {
+            "prob_true": 0.9090909090909091,
+            "prob_predicted": 0.6469952195445462
+        },
+        {
+            "prob_true": 1.0,
+            "prob_predicted": 0.7148551727457348
         }
     ]
 }
