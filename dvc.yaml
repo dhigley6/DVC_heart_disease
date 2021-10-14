@@ -30,11 +30,12 @@ stages:
     - models/logistic_regression.pickle
     - src/evaluate.py
     plots:
+    - results/calibration_curve.json:
+        cache: false
     - results/pr_curve.json:
         cache: false
-        x: recall
-        y: precision
     - results/roc_curve.json:
         cache: false
-        x: fpr
-        y: tpr
+    metrics:
+    - results/scores.json:
+        cache: false

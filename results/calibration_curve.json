@@ -1,0 +1,16 @@
+{
+    "calibration": [
+        {
+            "prob_true": 0.14285714285714285,
+            "prob_predicted": 0.3132185154967094
+        },
+        {
+            "prob_true": 0.5142857142857142,
+            "prob_predicted": 0.49118902971763634
+        },
+        {
+            "prob_true": 0.95,
+            "prob_predicted": 0.677532198485081
+        }
+    ]
+}

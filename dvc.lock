@@ -58,12 +58,18 @@ stages:
       md5: d38c6f76bf8f53151a62e6aec05dd1a4
       size: 1725
     - path: src/evaluate.py
-      md5: 112d674fe79d62b9b5b27c5031b17e4c
-      size: 1331
+      md5: c125372d749a624a65bc848ba5d65eff
+      size: 2004
     outs:
+    - path: results/calibration_curve.json
+      md5: 5f1e090be97bb436273384f1fd8628ff
+      size: 361
     - path: results/pr_curve.json
       md5: 12934d5010ceda8a6fd843cb9c7bcced
       size: 11235
     - path: results/roc_curve.json
       md5: bd4748c8c71a9c08b6a481839b492d8b
       size: 3318
+    - path: results/scores.json
+      md5: c602336c6abfc51ae5956751d7fd8518
+      size: 73
